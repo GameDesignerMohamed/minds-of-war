@@ -1,1 +1,0 @@
-const o=500,p=300,t=5,s=10,a=50,l=8,n={gold:500,wood:300,workers:5,initialSupply:10,maxSupplyCap:50,supplyPerFarm:8};export{n as default,o as gold,s as initialSupply,a as maxSupplyCap,l as supplyPerFarm,p as wood,t as workers};

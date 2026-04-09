@@ -1,1 +1,0 @@
-const s=.3,t=.2,o=["thrall","war_catapult"],a={radius:6,additionalMaxBonus:.1},l={maxBonus:.3,hpThreshold:.2,excludeTypes:o,warlordAura:a};export{l as default,o as excludeTypes,t as hpThreshold,s as maxBonus,a as warlordAura};

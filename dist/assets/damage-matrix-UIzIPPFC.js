@@ -1,1 +1,0 @@
-const e=.06,m=1,i={normal:{light:1,medium:1,heavy:.75,fortified:.5},pierce:{light:1.5,medium:1,heavy:.75,fortified:.35},siege:{light:.5,medium:.75,heavy:1,fortified:1.75},magic:{light:1.25,medium:1.25,heavy:1,fortified:.75}},a={armorReductionFactor:.06,minimumDamage:1,matrix:i};export{e as armorReductionFactor,a as default,i as matrix,m as minimumDamage};
