@@ -1,0 +1,1465 @@
+{
+  "version": "1.0.0",
+  "characters": {
+    "peasant": {
+      "faction": "human",
+      "portrait": "/art/portraits/peasant.png",
+      "worldScale": {
+        "x": 1.4,
+        "y": 1.7
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/peasant/peasant_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/peasant/peasant_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/peasant/peasant_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/peasant/peasant_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/peasant/peasant_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "footman": {
+      "faction": "human",
+      "portrait": "/art/portraits/footman.png",
+      "worldScale": {
+        "x": 1.6,
+        "y": 1.9
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/footman/footman_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/footman/footman_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/footman/footman_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/footman/footman_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/footman/footman_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "archer": {
+      "faction": "human",
+      "portrait": "/art/portraits/archer.png",
+      "worldScale": {
+        "x": 1.55,
+        "y": 1.85
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/archer/archer_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/archer/archer_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/archer/archer_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/archer/archer_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/archer/archer_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "knight": {
+      "faction": "human",
+      "portrait": "/art/portraits/knight.png",
+      "worldScale": {
+        "x": 2.4,
+        "y": 2.55
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/knight/knight_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/knight/knight_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/knight/knight_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/knight/knight_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/knight/knight_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "cleric": {
+      "faction": "human",
+      "portrait": "/art/portraits/cleric.png",
+      "worldScale": {
+        "x": 1.6,
+        "y": 2.0
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/cleric/cleric_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/cleric/cleric_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/cleric/cleric_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/cleric/cleric_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/cleric/cleric_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "catapult": {
+      "faction": "human",
+      "portrait": "/art/portraits/catapult.png",
+      "worldScale": {
+        "x": 2.8,
+        "y": 2.1
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/catapult/catapult_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/catapult/catapult_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/catapult/catapult_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/catapult/catapult_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/catapult/catapult_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "captain": {
+      "faction": "human",
+      "portrait": "/art/portraits/captain.png",
+      "worldScale": {
+        "x": 1.8,
+        "y": 2.15
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/captain/captain_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/captain/captain_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/captain/captain_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/captain/captain_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/captain/captain_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "thrall": {
+      "faction": "orc",
+      "portrait": "/art/portraits/thrall.png",
+      "worldScale": {
+        "x": 1.4,
+        "y": 1.7
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/thrall/thrall_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/thrall/thrall_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/thrall/thrall_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/thrall/thrall_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/thrall/thrall_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "grunt": {
+      "faction": "orc",
+      "portrait": "/art/portraits/grunt.png",
+      "worldScale": {
+        "x": 1.6,
+        "y": 1.9
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/grunt/grunt_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/grunt/grunt_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/grunt/grunt_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/grunt/grunt_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/grunt/grunt_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "hunter": {
+      "faction": "orc",
+      "portrait": "/art/portraits/hunter.png",
+      "worldScale": {
+        "x": 1.55,
+        "y": 1.85
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/hunter/hunter_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/hunter/hunter_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/hunter/hunter_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/hunter/hunter_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/hunter/hunter_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "berserker": {
+      "faction": "orc",
+      "portrait": "/art/portraits/berserker.png",
+      "worldScale": {
+        "x": 2.4,
+        "y": 2.55
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/berserker/berserker_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/berserker/berserker_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/berserker/berserker_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/berserker/berserker_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/berserker/berserker_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "shaman": {
+      "faction": "orc",
+      "portrait": "/art/portraits/shaman.png",
+      "worldScale": {
+        "x": 1.6,
+        "y": 2.0
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/shaman/shaman_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/shaman/shaman_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/shaman/shaman_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/shaman/shaman_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/shaman/shaman_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "war_catapult": {
+      "faction": "orc",
+      "portrait": "/art/portraits/war_catapult.png",
+      "worldScale": {
+        "x": 2.8,
+        "y": 2.1
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/war_catapult/war_catapult_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/war_catapult/war_catapult_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/war_catapult/war_catapult_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/war_catapult/war_catapult_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/war_catapult/war_catapult_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    },
+    "warlord": {
+      "faction": "orc",
+      "portrait": "/art/portraits/warlord.png",
+      "worldScale": {
+        "x": 1.8,
+        "y": 2.15
+      },
+      "states": {
+        "idle": {
+          "src": "/art/characters/warlord/warlord_idle_sheet.png",
+          "frameSize": 64,
+          "frameCount": 4,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "walk": {
+          "src": "/art/characters/warlord/warlord_walk_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "attack": {
+          "src": "/art/characters/warlord/warlord_attack_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "hurt": {
+          "src": "/art/characters/warlord/warlord_hurt_sheet.png",
+          "frameSize": 64,
+          "frameCount": 3,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        },
+        "death": {
+          "src": "/art/characters/warlord/warlord_death_sheet.png",
+          "frameSize": 64,
+          "frameCount": 6,
+          "rowCount": 8,
+          "directionOrder": [
+            "south",
+            "south_east",
+            "east",
+            "north_east",
+            "north",
+            "north_west",
+            "west",
+            "south_west"
+          ]
+        }
+      }
+    }
+  },
+  "buildings": {
+    "keep": {
+      "faction": "human",
+      "sprite": "/art/buildings/keep.png",
+      "portrait": "/art/portraits/keep.png",
+      "worldScale": {
+        "x": 5.2,
+        "y": 4.8
+      }
+    },
+    "farm": {
+      "faction": "human",
+      "sprite": "/art/buildings/farm.png",
+      "portrait": "/art/portraits/farm.png",
+      "worldScale": {
+        "x": 3.0,
+        "y": 2.7
+      }
+    },
+    "barracks": {
+      "faction": "human",
+      "sprite": "/art/buildings/barracks.png",
+      "portrait": "/art/portraits/barracks.png",
+      "worldScale": {
+        "x": 4.2,
+        "y": 3.7
+      }
+    },
+    "archery_range": {
+      "faction": "human",
+      "sprite": "/art/buildings/archery_range.png",
+      "portrait": "/art/portraits/archery_range.png",
+      "worldScale": {
+        "x": 4.0,
+        "y": 3.5
+      }
+    },
+    "sanctum": {
+      "faction": "human",
+      "sprite": "/art/buildings/sanctum.png",
+      "portrait": "/art/portraits/sanctum.png",
+      "worldScale": {
+        "x": 4.0,
+        "y": 3.9
+      }
+    },
+    "blacksmith": {
+      "faction": "human",
+      "sprite": "/art/buildings/blacksmith.png",
+      "portrait": "/art/portraits/blacksmith.png",
+      "worldScale": {
+        "x": 3.8,
+        "y": 3.4
+      }
+    },
+    "workshop": {
+      "faction": "human",
+      "sprite": "/art/buildings/workshop.png",
+      "portrait": "/art/portraits/workshop.png",
+      "worldScale": {
+        "x": 4.3,
+        "y": 3.8
+      }
+    },
+    "watch_tower": {
+      "faction": "human",
+      "sprite": "/art/buildings/watch_tower.png",
+      "portrait": "/art/portraits/watch_tower.png",
+      "worldScale": {
+        "x": 2.7,
+        "y": 4.5
+      }
+    },
+    "stronghold": {
+      "faction": "orc",
+      "sprite": "/art/buildings/stronghold.png",
+      "portrait": "/art/portraits/stronghold.png",
+      "worldScale": {
+        "x": 5.2,
+        "y": 4.8
+      }
+    },
+    "war_hut": {
+      "faction": "orc",
+      "sprite": "/art/buildings/war_hut.png",
+      "portrait": "/art/portraits/war_hut.png",
+      "worldScale": {
+        "x": 3.0,
+        "y": 2.7
+      }
+    },
+    "war_camp": {
+      "faction": "orc",
+      "sprite": "/art/buildings/war_camp.png",
+      "portrait": "/art/portraits/war_camp.png",
+      "worldScale": {
+        "x": 4.2,
+        "y": 3.7
+      }
+    },
+    "beast_den": {
+      "faction": "orc",
+      "sprite": "/art/buildings/beast_den.png",
+      "portrait": "/art/portraits/beast_den.png",
+      "worldScale": {
+        "x": 4.0,
+        "y": 3.5
+      }
+    },
+    "spirit_lodge": {
+      "faction": "orc",
+      "sprite": "/art/buildings/spirit_lodge.png",
+      "portrait": "/art/portraits/spirit_lodge.png",
+      "worldScale": {
+        "x": 4.0,
+        "y": 3.9
+      }
+    },
+    "war_forge": {
+      "faction": "orc",
+      "sprite": "/art/buildings/war_forge.png",
+      "portrait": "/art/portraits/war_forge.png",
+      "worldScale": {
+        "x": 3.8,
+        "y": 3.4
+      }
+    },
+    "siege_pit": {
+      "faction": "orc",
+      "sprite": "/art/buildings/siege_pit.png",
+      "portrait": "/art/portraits/siege_pit.png",
+      "worldScale": {
+        "x": 4.3,
+        "y": 3.8
+      }
+    },
+    "watch_post": {
+      "faction": "orc",
+      "sprite": "/art/buildings/watch_post.png",
+      "portrait": "/art/portraits/watch_post.png",
+      "worldScale": {
+        "x": 2.7,
+        "y": 4.5
+      }
+    }
+  },
+  "icons": {
+    "resources": {
+      "gold": "/art/icons/resources/gold.png",
+      "wood": "/art/icons/resources/wood.png",
+      "supply": "/art/icons/resources/supply.png"
+    },
+    "commands": {
+      "harvest": "/art/icons/commands/harvest.png",
+      "build-farm": "/art/icons/commands/build-farm.png",
+      "build-barracks": "/art/icons/commands/build-barracks.png",
+      "build-tower": "/art/icons/commands/build-tower.png",
+      "build-archery": "/art/icons/commands/build-archery.png",
+      "build-blacksmith": "/art/icons/commands/build-blacksmith.png",
+      "train-worker": "/art/icons/commands/train-worker.png",
+      "train-melee": "/art/icons/commands/train-melee.png",
+      "train-ranged": "/art/icons/commands/train-ranged.png",
+      "attack": "/art/icons/commands/attack.png",
+      "stop": "/art/icons/commands/stop.png"
+    },
+    "abilities": {
+      "heal": "/art/icons/abilities/heal.png",
+      "protective_chant": "/art/icons/abilities/protective_chant.png",
+      "blood_surge": "/art/icons/abilities/blood_surge.png",
+      "chain_flame": "/art/icons/abilities/chain_flame.png"
+    }
+  },
+  "ui": {
+    "frames": {
+      "panel": {
+        "src": "/art/ui/frame_panel.png",
+        "slice": 14
+      },
+      "button": {
+        "src": "/art/ui/frame_button.png",
+        "slice": 8
+      },
+      "minimap": {
+        "src": "/art/ui/frame_minimap.png",
+        "slice": 28
+      },
+      "portrait": {
+        "src": "/art/ui/frame_portrait.png",
+        "slice": 14
+      }
+    }
+  },
+  "vfx": {
+    "fire": "/art/vfx/fire.png",
+    "smoke": "/art/vfx/smoke.png",
+    "explosion": "/art/vfx/explosion.png",
+    "heal": "/art/vfx/heal.png",
+    "lightning": "/art/vfx/lightning.png",
+    "hit_spark": "/art/vfx/hit_spark.png"
+  }
+}

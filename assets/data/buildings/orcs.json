@@ -1,0 +1,116 @@
+{
+  "faction": "orc",
+  "factionName": "Blood-Bound",
+  "buildings": [
+    {
+      "id": "stronghold",
+      "name": "Stronghold",
+      "hp": 2500,
+      "armorType": "fortified",
+      "armorValue": 5,
+      "cost": { "gold": 450, "wood": 0 },
+      "buildTime": 60,
+      "populationProvided": 10,
+      "gridSize": "4x4",
+      "trains": ["thrall"],
+      "canAttack": false
+    },
+    {
+      "id": "war_hut",
+      "name": "War Hut",
+      "hp": 600,
+      "armorType": "fortified",
+      "armorValue": 2,
+      "cost": { "gold": 80, "wood": 25 },
+      "buildTime": 25,
+      "populationProvided": 8,
+      "gridSize": "2x2",
+      "trains": [],
+      "canAttack": false
+    },
+    {
+      "id": "war_camp",
+      "name": "War Camp",
+      "hp": 1200,
+      "armorType": "fortified",
+      "armorValue": 3,
+      "cost": { "gold": 160, "wood": 30 },
+      "buildTime": 40,
+      "populationProvided": 0,
+      "gridSize": "3x3",
+      "trains": ["grunt", "berserker"],
+      "canAttack": false
+    },
+    {
+      "id": "beast_den",
+      "name": "Beast Den",
+      "hp": 1000,
+      "armorType": "fortified",
+      "armorValue": 3,
+      "cost": { "gold": 140, "wood": 50 },
+      "buildTime": 38,
+      "populationProvided": 0,
+      "gridSize": "3x3",
+      "trains": ["hunter"],
+      "canAttack": false
+    },
+    {
+      "id": "spirit_lodge",
+      "name": "Spirit Lodge",
+      "hp": 900,
+      "armorType": "fortified",
+      "armorValue": 2,
+      "cost": { "gold": 180, "wood": 60 },
+      "buildTime": 42,
+      "populationProvided": 0,
+      "gridSize": "3x3",
+      "trains": ["shaman"],
+      "canAttack": false
+    },
+    {
+      "id": "war_forge",
+      "name": "War Forge",
+      "hp": 900,
+      "armorType": "fortified",
+      "armorValue": 3,
+      "cost": { "gold": 150, "wood": 70 },
+      "buildTime": 40,
+      "populationProvided": 0,
+      "gridSize": "3x3",
+      "trains": [],
+      "canAttack": false
+    },
+    {
+      "id": "siege_pit",
+      "name": "Siege Pit",
+      "hp": 1000,
+      "armorType": "fortified",
+      "armorValue": 3,
+      "cost": { "gold": 170, "wood": 90 },
+      "buildTime": 42,
+      "populationProvided": 0,
+      "gridSize": "3x3",
+      "trains": ["war_catapult"],
+      "canAttack": false
+    },
+    {
+      "id": "watch_post",
+      "name": "Watch Post",
+      "hp": 900,
+      "armorType": "fortified",
+      "armorValue": 4,
+      "cost": { "gold": 120, "wood": 70 },
+      "buildTime": 30,
+      "populationProvided": 0,
+      "gridSize": "2x2",
+      "trains": [],
+      "canAttack": true,
+      "attack": {
+        "damage": 20,
+        "attackType": "pierce",
+        "range": 7.5,
+        "cooldown": 1.2
+      }
+    }
+  ]
+}

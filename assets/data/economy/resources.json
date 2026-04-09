@@ -1,0 +1,14 @@
+{
+  "goldMine": {
+    "capacity": 5000,
+    "workerCarry": 10,
+    "mineTime": 2.0,
+    "maxEffectiveWorkers": 5
+  },
+  "tree": {
+    "capacity": 100,
+    "workerCarry": 10,
+    "chopTime": 2.5
+  },
+  "dropOffTime": 0.25
+}

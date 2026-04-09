@@ -1,0 +1,63 @@
+{
+  "upgrades": [
+    {
+      "id": "hq_upgrade_1",
+      "name": "HQ Upgrade I",
+      "tier": 2,
+      "cost": { "gold": 200, "wood": 100 },
+      "researchTime": 45,
+      "researchedAt": "keep",
+      "unlocks": {
+        "human": {
+          "units": ["knight", "cleric"],
+          "buildings": ["sanctum", "blacksmith"]
+        },
+        "orc": {
+          "units": ["berserker", "shaman"],
+          "buildings": ["spirit_lodge", "war_forge"]
+        }
+      }
+    },
+    {
+      "id": "hq_upgrade_2",
+      "name": "HQ Upgrade II",
+      "tier": 3,
+      "cost": { "gold": 400, "wood": 200 },
+      "researchTime": 60,
+      "requires": ["hq_upgrade_1"],
+      "researchedAt": "keep",
+      "unlocks": {
+        "human": {
+          "units": ["captain", "catapult"],
+          "buildings": ["workshop"]
+        },
+        "orc": {
+          "units": ["warlord", "war_catapult"],
+          "buildings": ["siege_pit"]
+        }
+      }
+    }
+  ],
+  "weaponUpgrades": {
+    "levels": 3,
+    "damagePerLevel": 2,
+    "costPerLevel": [
+      { "gold": 100, "wood": 50 },
+      { "gold": 175, "wood": 75 },
+      { "gold": 250, "wood": 100 }
+    ],
+    "researchTimePerLevel": [30, 40, 50],
+    "researchedAt": "blacksmith"
+  },
+  "armorUpgrades": {
+    "levels": 3,
+    "armorPerLevel": 1,
+    "costPerLevel": [
+      { "gold": 100, "wood": 50 },
+      { "gold": 175, "wood": 75 },
+      { "gold": 250, "wood": 100 }
+    ],
+    "researchTimePerLevel": [30, 40, 50],
+    "researchedAt": "blacksmith"
+  }
+}

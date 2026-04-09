@@ -1,0 +1,10 @@
+{
+  "armorReductionFactor": 0.06,
+  "minimumDamage": 1,
+  "matrix": {
+    "normal": { "light": 1.0, "medium": 1.0, "heavy": 0.75, "fortified": 0.5 },
+    "pierce": { "light": 1.5, "medium": 1.0, "heavy": 0.75, "fortified": 0.35 },
+    "siege": { "light": 0.5, "medium": 0.75, "heavy": 1.0, "fortified": 1.75 },
+    "magic": { "light": 1.25, "medium": 1.25, "heavy": 1.0, "fortified": 0.75 }
+  }
+}

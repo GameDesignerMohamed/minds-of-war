@@ -1,0 +1,8 @@
+{
+  "gold": 500,
+  "wood": 300,
+  "workers": 5,
+  "initialSupply": 10,
+  "maxSupplyCap": 50,
+  "supplyPerFarm": 8
+}

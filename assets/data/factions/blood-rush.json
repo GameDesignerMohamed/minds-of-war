@@ -1,0 +1,9 @@
+{
+  "maxBonus": 0.3,
+  "hpThreshold": 0.2,
+  "excludeTypes": ["thrall", "war_catapult"],
+  "warlordAura": {
+    "radius": 6,
+    "additionalMaxBonus": 0.1
+  }
+}

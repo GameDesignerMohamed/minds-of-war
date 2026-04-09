@@ -1,0 +1,9 @@
+{
+  "radius": 6,
+  "updateFrequency": 0.25,
+  "maxAuraAllies": 8,
+  "maxAttackSpeedBonus": 0.2,
+  "maxArmorBonus": 2,
+  "sources": ["captain"],
+  "knightEligibleAfter": "blacksmith_research"
+}

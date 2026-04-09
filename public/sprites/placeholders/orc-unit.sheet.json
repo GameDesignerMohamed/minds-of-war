@@ -1,0 +1,35 @@
+{
+  "id": "orc_unit_placeholder",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "sheetWidth": 256,
+  "sheetHeight": 512,
+  "defaultState": "idle",
+  "scale": {
+    "x": 1.4,
+    "y": 1.4
+  },
+  "states": {
+    "idle": {
+      "textureUrl": "./orc-unit-placeholder.png",
+      "frameCount": 1,
+      "fps": 1,
+      "loop": true,
+      "startColumn": 0
+    },
+    "walk": {
+      "textureUrl": "./orc-unit-placeholder.png",
+      "frameCount": 4,
+      "fps": 6,
+      "loop": true,
+      "startColumn": 0
+    },
+    "attack": {
+      "textureUrl": "./orc-unit-placeholder.png",
+      "frameCount": 4,
+      "fps": 8,
+      "loop": false,
+      "startColumn": 0
+    }
+  }
+}

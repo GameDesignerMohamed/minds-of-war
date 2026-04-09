@@ -1,0 +1,73 @@
+{
+  "name": "Skirmish Valley",
+  "gridSize": 96,
+  "tileSize": 1,
+  "startingPositions": {
+    "player1": { "x": 10, "z": 10, "corner": "NW" },
+    "player2": { "x": 82, "z": 82, "corner": "SE" }
+  },
+  "goldMines": [
+    { "x": 20, "z": 20, "capacity": 5000, "owner": "player1_main" },
+    { "x": 15, "z": 30, "capacity": 5000, "owner": "player1_expansion" },
+    { "x": 72, "z": 72, "capacity": 5000, "owner": "player2_main" },
+    { "x": 77, "z": 62, "capacity": 5000, "owner": "player2_expansion" },
+    { "x": 42, "z": 50, "capacity": 5000, "owner": "neutral" },
+    { "x": 50, "z": 42, "capacity": 5000, "owner": "neutral" }
+  ],
+  "treeLines": [
+    { "start": { "x": 5, "z": 18 }, "end": { "x": 5, "z": 28 }, "treesPerTile": 1 },
+    { "start": { "x": 88, "z": 64 }, "end": { "x": 88, "z": 74 }, "treesPerTile": 1 },
+    { "start": { "x": 35, "z": 35 }, "end": { "x": 45, "z": 35 }, "treesPerTile": 1 },
+    { "start": { "x": 48, "z": 58 }, "end": { "x": 58, "z": 58 }, "treesPerTile": 1 }
+  ],
+  "terrain": {
+    "default": "grassland",
+    "atlas": {
+      "image": "/textures/terrain/terrain-atlas.png",
+      "columns": 4,
+      "rows": 4,
+      "tiles": {
+        "grassland": {
+          "variants": [
+            { "col": 0, "row": 0 },
+            { "col": 1, "row": 0 },
+            { "col": 2, "row": 0 },
+            { "col": 3, "row": 0 }
+          ],
+          "randomRotation": true
+        },
+        "forest": {
+          "variants": [
+            { "col": 0, "row": 1 },
+            { "col": 1, "row": 1 },
+            { "col": 2, "row": 1 },
+            { "col": 3, "row": 1 }
+          ],
+          "randomRotation": true
+        },
+        "cliff": {
+          "variants": [
+            { "col": 0, "row": 2 },
+            { "col": 1, "row": 2 },
+            { "col": 2, "row": 2 },
+            { "col": 3, "row": 2 }
+          ],
+          "randomRotation": true
+        },
+        "road": {
+          "variants": [
+            { "col": 0, "row": 3 },
+            { "col": 1, "row": 3 },
+            { "col": 2, "row": 3 },
+            { "col": 3, "row": 3 }
+          ],
+          "randomRotation": true
+        }
+      }
+    },
+    "cliffs": [
+      { "rect": { "x": 30, "z": 44, "w": 4, "h": 8 } },
+      { "rect": { "x": 58, "z": 44, "w": 4, "h": 8 } }
+    ]
+  }
+}

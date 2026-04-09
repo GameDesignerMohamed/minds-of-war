@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "validatedRuntimePipeline": {
+    "completed": true,
+    "validatedAt": "2026-04-07",
+    "prerequisites": {
+      "phase1_sprite_pipeline": true,
+      "phase2_terrain_texturing": true,
+      "phase3_ui_redesign": true,
+      "phase4_particle_vfx": true
+    },
+    "notes": [
+      "Placeholder-backed sprite, terrain, UI, and VFX runtime contracts are locked.",
+      "Final art generation is allowed only after this marker is present and valid."
+    ]
+  },
+  "artPhase5": {
+    "card": "Phase 5 Final art assets after validated pipeline completion",
+    "status": "completed",
+    "completedAt": "2026-04-07",
+    "supersedes": "Phase 5: AI Art Generation",
+    "reason": "The original Phase 5 card was advanced out of order before the full dependency chain finished.",
+    "notes": [
+      "Final unit sprite sheets, buildings, terrain, portraits, icons, UI frames, and VFX textures were regenerated after pipeline validation.",
+      "Runtime contracts remain stable because published assets are resolved through artManifest.json."
+    ]
+  }
+}
