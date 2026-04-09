@@ -266,7 +266,12 @@ export class SpellSystem extends System {
 
     if (existingIndex !== -1) {
       // Upsert — refresh duration, do NOT re-apply the armor delta.
-      (buffs.buffList[existingIndex] as unknown as { remainingDuration: number }).remainingDuration = duration;
+      const existing = buffs.buffList[existingIndex];
+      if (existing === undefined) {
+        return;
+      }
+
+      existing.remainingDuration = duration;
       return;
     }
 
@@ -317,7 +322,12 @@ export class SpellSystem extends System {
 
     if (existingIndex !== -1) {
       // Upsert — refresh duration. Do NOT double-increment bonusIncrease.
-      (buffs.buffList[existingIndex] as unknown as { remainingDuration: number }).remainingDuration = duration;
+      const existing = buffs.buffList[existingIndex];
+      if (existing === undefined) {
+        return;
+      }
+
+      existing.remainingDuration = duration;
       return;
     }
 

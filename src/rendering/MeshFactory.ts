@@ -10,7 +10,6 @@
 
 import * as THREE from 'three';
 import { getBuildingArt, getCharacterArt, getCharacterStateSheet } from '@/art/ArtLibrary';
-import { loadBuildingModel, loadCharacterModel } from '@/rendering/ModelLoader';
 import type {
   InitializedMapData,
   TerrainAtlasDefinition,
@@ -155,37 +154,37 @@ export class MeshFactory {
   createUnitMesh(faction: Faction, unitId?: string): THREE.Object3D {
     const c = factionColors(faction);
     const id = unitId ?? 'generic';
-
-    // Priority 1: sprite from art manifest
     const sprite = this._createCharacterSprite(id);
+
     if (sprite !== null) {
       return sprite;
     }
 
-    // Priority 3: immediate procedural geometry (shows while model loads)
-    const wrapper = new THREE.Group();
-    wrapper.userData['spriteCategory'] = 'unit';
-
     switch (id) {
-      case 'peasant': case 'thrall': wrapper.add(this._makeWorker(c)); break;
-      case 'footman': case 'grunt': wrapper.add(this._makeMelee(c)); break;
-      case 'archer': case 'hunter': wrapper.add(this._makeRanged(c)); break;
-      case 'knight': case 'berserker': wrapper.add(this._makeMounted(c)); break;
-      case 'cleric': case 'shaman': wrapper.add(this._makeCaster(c)); break;
-      case 'catapult': case 'war_catapult': wrapper.add(this._makeSiege(c)); break;
-      case 'captain': case 'warlord': wrapper.add(this._makeHero(c)); break;
-      default: wrapper.add(this._makeMelee(c)); break;
+      case 'peasant':
+      case 'thrall':
+        return this._makeWorker(c);
+      case 'footman':
+      case 'grunt':
+        return this._makeMelee(c);
+      case 'archer':
+      case 'hunter':
+        return this._makeRanged(c);
+      case 'knight':
+      case 'berserker':
+        return this._makeMounted(c);
+      case 'cleric':
+      case 'shaman':
+        return this._makeCaster(c);
+      case 'catapult':
+      case 'war_catapult':
+        return this._makeSiege(c);
+      case 'captain':
+      case 'warlord':
+        return this._makeHero(c);
+      default:
+        return this._makeMelee(c);
     }
-
-    // Priority 2: async 3D model swap (replaces procedural geometry when loaded)
-    loadCharacterModel(id).then((model) => {
-      if (model) {
-        wrapper.clear();
-        wrapper.add(model);
-      }
-    }).catch(() => { /* keep procedural fallback */ });
-
-    return wrapper;
   }
 
   private _makeWorker(c: { primary: number; secondary: number; accent: number }): THREE.Group {
@@ -460,37 +459,40 @@ export class MeshFactory {
   createBuildingMesh(faction: Faction, buildingId?: string): THREE.Object3D {
     const c = factionColors(faction);
     const id = buildingId ?? 'generic';
-
-    // Immediate: show procedural geometry or sprite while 3D model loads
-    const wrapper = new THREE.Group();
-    wrapper.userData['spriteCategory'] = 'building';
-
     const sprite = this._createBuildingSprite(id);
+
     if (sprite !== null) {
-      wrapper.add(sprite);
-    } else {
-      switch (id) {
-        case 'keep': case 'stronghold': wrapper.add(this._makeHQ(c)); break;
-        case 'farm': case 'war_hut': wrapper.add(this._makeFarm(c)); break;
-        case 'barracks': case 'war_camp': wrapper.add(this._makeBarracks(c)); break;
-        case 'archery_range': case 'beast_den': wrapper.add(this._makeRange(c)); break;
-        case 'watch_tower': case 'watch_post': wrapper.add(this._makeTower(c)); break;
-        case 'blacksmith': case 'war_forge': wrapper.add(this._makeSmith(c)); break;
-        case 'sanctum': case 'spirit_lodge': wrapper.add(this._makeTemple(c)); break;
-        case 'workshop': case 'siege_pit': wrapper.add(this._makeWorkshop(c)); break;
-        default: wrapper.add(this._makeBarracks(c)); break;
-      }
+      return sprite;
     }
 
-    // Async: swap in 3D model when loaded (replaces sprite or procedural)
-    loadBuildingModel(id).then((model) => {
-      if (model) {
-        wrapper.clear();
-        wrapper.add(model);
-      }
-    }).catch(() => { /* keep fallback */ });
-
-    return wrapper;
+    switch (id) {
+      case 'keep':
+      case 'stronghold':
+        return this._makeHQ(c);
+      case 'farm':
+      case 'war_hut':
+        return this._makeFarm(c);
+      case 'barracks':
+      case 'war_camp':
+        return this._makeBarracks(c);
+      case 'archery_range':
+      case 'beast_den':
+        return this._makeRange(c);
+      case 'watch_tower':
+      case 'watch_post':
+        return this._makeTower(c);
+      case 'blacksmith':
+      case 'war_forge':
+        return this._makeSmith(c);
+      case 'sanctum':
+      case 'spirit_lodge':
+        return this._makeTemple(c);
+      case 'workshop':
+      case 'siege_pit':
+        return this._makeWorkshop(c);
+      default:
+        return this._makeBarracks(c);
+    }
   }
 
   private _makeHQ(c: { primary: number; secondary: number; accent: number }): THREE.Group {

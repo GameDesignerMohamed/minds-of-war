@@ -203,15 +203,13 @@ export class DisciplineAuraSystem extends System {
     const existingIndex = buffs.buffList.findIndex((b) => b.buffId === buffId);
 
     if (existingIndex !== -1) {
-      // Upsert: refresh duration and source, keep magnitude identical.
-      // Cast through unknown to satisfy the readonly constraint — this is the
-      // intentional mutation point for the upsert pattern.
-      const existing = buffs.buffList[existingIndex] as unknown as {
-        remainingDuration: number;
-        sourceEntity: EntityId;
-      };
+      // Upsert: refresh duration and keep the existing source + magnitude.
+      const existing = buffs.buffList[existingIndex];
+      if (existing === undefined) {
+        return;
+      }
+
       existing.remainingDuration = duration;
-      // sourceEntity does not change — the aura source is stable.
       return;
     }
 

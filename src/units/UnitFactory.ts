@@ -15,13 +15,14 @@ import type { SceneManager } from '../rendering/SceneManager';
 import type { MeshFactory } from '../rendering/MeshFactory';
 import type { HpBarSystem } from '../rendering/HpBarSystem';
 import type { PlayerId, EntityId } from '../types';
-import { AttackType, ArmorType, Faction } from '../types';
+import { Faction } from '../types';
 import {
   createFactionIndex,
   createPlayerConfigIndex,
   requirePlayerConfig,
   type PlayerConfig,
 } from '../players/PlayerConfig';
+import { toAttackType, toArmorType } from '../utils/TypeMappers';
 import {
   PositionType,
   HealthType,
@@ -53,28 +54,6 @@ function toFaction(factionId: string): Faction {
     default:
       throw new Error(`Unsupported faction: ${factionId}`);
   }
-}
-
-/** Maps lowercase JSON attack type string to AttackType enum. */
-function toAttackType(s: string): AttackType {
-  const map: Record<string, AttackType> = {
-    normal: AttackType.Normal,
-    pierce: AttackType.Pierce,
-    siege: AttackType.Siege,
-    magic: AttackType.Magic,
-  };
-  return map[s] ?? AttackType.Normal;
-}
-
-/** Maps lowercase JSON armor type string to ArmorType enum. */
-function toArmorType(s: string): ArmorType {
-  const map: Record<string, ArmorType> = {
-    light: ArmorType.Light,
-    medium: ArmorType.Medium,
-    heavy: ArmorType.Heavy,
-    fortified: ArmorType.Fortified,
-  };
-  return map[s] ?? ArmorType.Light;
 }
 
 export class UnitFactory {

@@ -1,51 +1,81 @@
+import { existsSync, readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import * as THREE from 'three';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
+import { getArtManifest, getBuildingArt, getCharacterStateSheet } from '@/art/ArtLibrary';
+import { MeshFactory } from '@/rendering/MeshFactory';
 import { Faction, TerrainType } from '@/types';
-import type { TerrainTileDescriptor } from '@/map/MapInitializer';
 
-// Mock ArtLibrary so MeshFactory always falls back to geometry (no DOM needed)
-vi.mock('@/art/ArtLibrary', () => ({
-  getCharacterArt: () => null,
-  getCharacterStateSheet: () => null,
-  getBuildingArt: () => null,
-}));
+function publicAssetPath(assetUrl: string): string {
+  return fileURLToPath(new URL(`../../../public${assetUrl}`, import.meta.url));
+}
 
-// Mock ModelLoader so async model loading doesn't run in tests
-vi.mock('@/rendering/ModelLoader', () => ({
-  loadCharacterModel: () => Promise.resolve(null),
-  loadBuildingModel: () => Promise.resolve(null),
-  loadResourceModel: () => Promise.resolve(null),
-}));
+function parsePngDimensions(buffer: Buffer): { width: number; height: number } {
+  const pngSignature = '89504e470d0a1a0a';
+  expect(buffer.subarray(0, 8).toString('hex')).toBe(pngSignature);
 
-// Import after mock is set up
-const { MeshFactory } = await import('@/rendering/MeshFactory');
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20),
+  };
+}
+
+function createTexture(width: number, height: number): THREE.Texture {
+  const texture = new THREE.Texture();
+  Object.assign(texture, {
+    image: { width, height },
+  });
+  return texture;
+}
 
 describe('MeshFactory', () => {
-  it('returns geometry fallback for units and buildings when no art is loaded', () => {
-    const factory = new MeshFactory();
+  it('returns THREE.Sprite visuals for units and buildings', () => {
+    const factory = new MeshFactory() as MeshFactory & {
+      _getTexture: (url: string) => THREE.Texture;
+      _getTextureFrame: (
+        url: string,
+        col: number,
+        row: number,
+        columns: number,
+        rows: number,
+      ) => THREE.Texture;
+    };
+    const spriteTexture = createTexture(256, 256);
+    factory._getTexture = () => spriteTexture;
+    factory._getTextureFrame = () => spriteTexture;
 
     const unit = factory.createUnitMesh(Faction.Human, 'footman');
     const building = factory.createBuildingMesh(Faction.Orc, 'stronghold');
+    const terrain = factory.createTerrainTile(
+      { terrain: TerrainType.Grassland, x: 2, z: 3, atlasIndex: 0 },
+      null,
+    );
 
-    // Fallback returns THREE.Group (composed primitives), not THREE.Sprite
-    expect(unit).toBeInstanceOf(THREE.Group);
-    expect(building).toBeInstanceOf(THREE.Group);
+    expect(unit).toBeInstanceOf(THREE.Sprite);
+    expect(building).toBeInstanceOf(THREE.Sprite);
+    expect(terrain).toBeInstanceOf(THREE.Mesh);
+    expect((unit as THREE.Sprite).material).toBeInstanceOf(THREE.SpriteMaterial);
+    expect((building as THREE.Sprite).material).toBeInstanceOf(THREE.SpriteMaterial);
   });
 
-  it('creates terrain tiles with the descriptor API', () => {
-    const factory = new MeshFactory();
+  it('ships referenced art assets for the sprite-based presentation', () => {
+    const manifest = getArtManifest();
+    const archerIdle = getCharacterStateSheet('archer', 'idle');
+    const stronghold = getBuildingArt('stronghold');
 
-    const tile: TerrainTileDescriptor = {
-      x: 2,
-      z: 3,
-      terrain: TerrainType.Grassland,
-      atlasFrame: null,
-      rotationQuarterTurns: 0,
-    };
+    expect(archerIdle).toBeTruthy();
+    expect(stronghold).toBeTruthy();
+    expect(existsSync(publicAssetPath(archerIdle!.src))).toBe(true);
+    expect(existsSync(publicAssetPath(stronghold!.sprite))).toBe(true);
 
-    const mesh = factory.createTerrainTile(tile, null);
-    expect(mesh).toBeInstanceOf(THREE.Mesh);
-    expect(mesh.position.x).toBe(2);
-    expect(mesh.position.z).toBe(3);
+    const archerSize = parsePngDimensions(readFileSync(publicAssetPath(archerIdle!.src)));
+    const strongholdSize = parsePngDimensions(readFileSync(publicAssetPath(stronghold!.sprite)));
+
+    expect(archerSize.width).toBeGreaterThan(0);
+    expect(archerSize.height).toBeGreaterThan(0);
+    expect(strongholdSize.width).toBeGreaterThan(0);
+    expect(strongholdSize.height).toBeGreaterThan(0);
+    expect(Object.keys(manifest.characters).length).toBeGreaterThan(0);
+    expect(Object.keys(manifest.buildings).length).toBeGreaterThan(0);
   });
 });

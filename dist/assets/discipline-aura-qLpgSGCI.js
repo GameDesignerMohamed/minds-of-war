@@ -1,0 +1,1 @@
+const e=6,t=.25,c=8,n=.2,o=2,s=["captain"],a="blacksmith_research",r={radius:6,updateFrequency:.25,maxAuraAllies:8,maxAttackSpeedBonus:.2,maxArmorBonus:2,sources:s,knightEligibleAfter:a};export{r as default,a as knightEligibleAfter,o as maxArmorBonus,n as maxAttackSpeedBonus,c as maxAuraAllies,e as radius,s as sources,t as updateFrequency};

@@ -1438,19 +1438,19 @@
     "frames": {
       "panel": {
         "src": "/art/ui/frame_panel.png",
-        "slice": 14
+        "slice": 16
       },
       "button": {
         "src": "/art/ui/frame_button.png",
-        "slice": 8
+        "slice": 10
       },
       "minimap": {
         "src": "/art/ui/frame_minimap.png",
-        "slice": 28
+        "slice": 16
       },
       "portrait": {
         "src": "/art/ui/frame_portrait.png",
-        "slice": 14
+        "slice": 10
       }
     }
   },

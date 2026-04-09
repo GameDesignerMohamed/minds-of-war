@@ -1,0 +1,1 @@
+const e={ecoPhase:{targetGoldWorkers:5,targetWoodWorkers:3,minWorkers:8},buildPhase:{firstBuilding:"barracks",supplyBuilding:"farm",upgradeGoldThreshold:200},armyPhase:{meleeToRangedRatio:2,attackSupplyThreshold:20},attackPhase:{retreatSupplyThreshold:10},defenseOverride:{triggerOnBuildingAttacked:!0}},r={normal:e};export{r as default,e as normal};

@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { CameraController } from '@/rendering/CameraController';
 import { HpBarSystem } from '@/rendering/HpBarSystem';
-import { loadResourceModel } from '@/rendering/ModelLoader';
 import { SceneManager } from '@/rendering/SceneManager';
 import { Faction } from '@/types';
 import type { World } from '@/ecs/World';
@@ -135,7 +134,6 @@ export function spawnResourceNode(
   });
   world.addComponent(id, RenderableType, { sceneKey, visible: true });
 
-  // Immediate procedural fallback
   let object3d: THREE.Object3D;
   if (kind === 'gold') {
     object3d = new THREE.Mesh(
@@ -169,14 +167,4 @@ export function spawnResourceNode(
 
   object3d.userData['entityId'] = id;
   sceneManager.addObject(sceneKey, object3d);
-
-  // Async: swap in Kenney 3D model when loaded
-  loadResourceModel(kind).then((model) => {
-    if (model) {
-      model.position.set(x, 0, z);
-      model.userData['entityId'] = id;
-      sceneManager.removeObject(sceneKey);
-      sceneManager.addObject(sceneKey, model);
-    }
-  }).catch(() => { /* keep procedural fallback */ });
 }

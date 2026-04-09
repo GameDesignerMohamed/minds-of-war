@@ -188,7 +188,7 @@ export class HUD {
       backdropFilter: 'blur(6px)',
       pointerEvents: 'none',
     } satisfies Partial<CSSStyleDeclaration>);
-    applyUiFrameStyles(bar, 'panel', 14, 'rgba(10,12,16,0.88)');
+    applyUiFrameStyles(bar, 'panel', 10, 'rgba(10,12,16,0.78)');
     bar.style.borderTop = '';
 
     bar.appendChild(this._buildResourceWidget('gold', 'Gold', getResourceIconPath('gold') ?? '⬡'));
@@ -333,18 +333,18 @@ export class HUD {
 
     const minimap = this._createSidebarSection('Minimap');
     minimap.id = 'hud-minimap';
-    applyUiFrameStyles(minimap, 'minimap', 16, 'rgba(10,12,16,0.92)');
+    applyUiFrameStyles(minimap, 'minimap', 12, 'rgba(10,12,16,0.90)');
     minimap.appendChild(this._buildSidebarPlaceholder('MINIMAP'));
     this._minimapFrame = minimap;
 
     const selection = this._createSidebarSection('Selection details');
     selection.id = 'hud-selection-frame';
-    applyUiFrameStyles(selection, 'panel', 14, 'rgba(10,12,16,0.92)');
+    applyUiFrameStyles(selection, 'panel', 10, 'rgba(10,12,16,0.90)');
     this._selectionFrame = selection;
 
     const command = this._createSidebarSection('Command card');
     command.id = 'hud-command-frame';
-    applyUiFrameStyles(command, 'panel', 14, 'rgba(10,12,16,0.92)');
+    applyUiFrameStyles(command, 'panel', 10, 'rgba(10,12,16,0.90)');
     this._commandFrame = command;
 
     sidebar.appendChild(minimap);

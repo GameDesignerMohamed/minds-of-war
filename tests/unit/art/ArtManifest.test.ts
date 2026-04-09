@@ -82,12 +82,13 @@ describe('Art manifest', () => {
       expect(readPngSize(toPublicFile(iconPath))).toEqual({ width: 64, height: 64 });
     }
 
-    for (const [_frameId, frame] of Object.entries(manifest.ui.frames)) {
-      const framePath = toPublicFile(frame.src);
-      expect(existsSync(framePath), `UI frame ${frame.src} exists`).toBe(true);
-      const size = readPngSize(framePath);
-      expect(size.width).toBeGreaterThanOrEqual(32);
-      expect(size.height).toBeGreaterThanOrEqual(24);
+    for (const [frameId, frame] of Object.entries(manifest.ui.frames)) {
+      const size = readPngSize(toPublicFile(frame.src));
+      if (frameId === 'panel') {
+        expect(size).toEqual({ width: 48, height: 48 });
+      } else {
+        expect(size).toEqual({ width: 32, height: 32 });
+      }
       expect(frame.slice).toBeGreaterThan(0);
     }
 

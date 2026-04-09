@@ -1,0 +1,1 @@
+const e={capacity:5e3,workerCarry:10,mineTime:2,maxEffectiveWorkers:5},r={capacity:100,workerCarry:10,chopTime:2.5},o=.25,c={goldMine:e,tree:r,dropOffTime:o};export{c as default,o as dropOffTime,e as goldMine,r as tree};
