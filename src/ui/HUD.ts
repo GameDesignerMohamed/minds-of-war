@@ -12,7 +12,7 @@
  *
  * Visual spec:
  * - Dark background panels with 70 % opacity (rgba(10,12,16,0.70))
- * - Cyan accent text (#3df2c0, Space Mono for values)
+ * - Amber gold accent text (#e8a840, Space Mono for values)
  * - Section labels in Poppins 600
  * - Smooth CSS transitions on all numeric counters (counter-roll handled in
  *   _animateValue)
@@ -225,7 +225,7 @@ export class HUD {
       fontFamily: "'Space Mono', monospace",
       fontWeight: '700',
       fontSize: '0.95rem',
-      color: '#3df2c0',
+      color: '#e8a840',
       minWidth: '50px',
     } satisfies Partial<CSSStyleDeclaration>);
 
@@ -261,7 +261,7 @@ export class HUD {
       iconEl.textContent = icon;
       Object.assign(iconEl.style, {
         fontSize: '0.9rem',
-        color: '#3df2c0',
+        color: '#e8a840',
       } satisfies Partial<CSSStyleDeclaration>);
     }
 
@@ -283,7 +283,7 @@ export class HUD {
       fontFamily: "'Space Mono', monospace",
       fontWeight: '700',
       fontSize: '0.95rem',
-      color: '#3df2c0',
+      color: '#e8a840',
       minWidth: '52px',
       textAlign: 'right',
       transition: this._reducedMotion ? 'none' : 'color 0.2s',
@@ -307,7 +307,7 @@ export class HUD {
     Object.assign(d.style, {
       width: '1px',
       height: '20px',
-      background: 'rgba(61,242,192,0.20)',
+      background: 'rgba(232,168,64,0.20)',
     } satisfies Partial<CSSStyleDeclaration>);
     d.setAttribute('aria-hidden', 'true');
     return d;
@@ -378,7 +378,7 @@ export class HUD {
       fontFamily: "'Poppins', sans-serif",
       fontWeight: '600',
       fontSize: '0.7rem',
-      color: 'rgba(61,242,192,0.25)',
+      color: 'rgba(232,168,64,0.25)',
       letterSpacing: '0.12em',
       pointerEvents: 'none',
     } satisfies Partial<CSSStyleDeclaration>);
@@ -420,7 +420,7 @@ export class HUD {
     el.style.color = '#ffffff';
     // Reset back after transition completes (200 ms matches the CSS transition).
     const handle = setTimeout(() => {
-      el.style.color = '#3df2c0';
+      el.style.color = '#e8a840';
     }, 160);
     // Store on element to allow cancellation if update fires again quickly.
     const prev = (el as HTMLElement & { _flashHandle?: ReturnType<typeof setTimeout> })

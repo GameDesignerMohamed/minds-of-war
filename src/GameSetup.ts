@@ -42,6 +42,8 @@ export function createGameSetup({
   initialCameraTarget,
 }: GameSetupParams): GameSetupResult {
   const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.domElement.style.cssText = 'position:fixed;inset:0;z-index:0;';
@@ -52,7 +54,7 @@ export function createGameSetup({
 
   const ground = new THREE.Mesh(
     new THREE.PlaneGeometry(mapWidth + BORDER_PADDING, mapHeight + BORDER_PADDING),
-    new THREE.MeshStandardMaterial({ color: 0x3a5a2a, roughness: 0.9 }),
+    new THREE.MeshStandardMaterial({ color: 0x5a8a3a, roughness: 0.9 }),
   );
   ground.rotation.x = -Math.PI / 2;
   ground.position.set(mapWidth / 2, -0.01, mapHeight / 2);
@@ -91,7 +93,7 @@ export function createGameSetup({
     panSpeed: 15,
     mapWidth,
     mapHeight,
-    baseViewWidth: 70,
+    baseViewWidth: 35,
   });
   cameraController.centerOn(initialCameraTarget.x, initialCameraTarget.z);
 
@@ -165,6 +167,12 @@ export function spawnResourceNode(
     object3d = group;
   }
 
+  object3d.traverse((node) => {
+    if (node instanceof THREE.Mesh) {
+      node.castShadow = true;
+      node.receiveShadow = true;
+    }
+  });
   object3d.userData['entityId'] = id;
   sceneManager.addObject(sceneKey, object3d);
 }

@@ -17,7 +17,7 @@
  * - 3-column grid of square buttons.
  * - Inactive buttons: rgba(10,12,16,0.75) fill, cyan border 18 % opacity.
  * - Hover/focus: cyan border 50 % opacity, 4 % cyan fill.
- * - Active/pressed: filled with rgba(61,242,192,0.18).
+ * - Active/pressed: filled with rgba(232,168,64,0.18).
  * - Disabled buttons: 30 % opacity, cursor not-allowed.
  * - Hotkey badge: top-right corner, Poppins 600, small.
  *
@@ -287,7 +287,7 @@ export class CommandCard {
         fontFamily: "'Poppins', sans-serif",
         fontWeight: '600',
         fontSize: '0.58rem',
-        color: '#3df2c0',
+        color: '#e8a840',
         lineHeight: '1',
         pointerEvents: 'none',
         letterSpacing: '0',
@@ -306,7 +306,7 @@ export class CommandCard {
       transform: 'translateX(-50%)',
       whiteSpace: 'nowrap',
       background: 'rgba(10,12,16,0.96)',
-      border: '1px solid rgba(61,242,192,0.20)',
+      border: '1px solid rgba(232,168,64,0.20)',
       borderRadius: '3px',
       padding: '2px 6px',
       fontFamily: "'Poppins', sans-serif",
@@ -322,28 +322,28 @@ export class CommandCard {
     // Hover / focus interactions
     if (!item.disabled) {
       btn.addEventListener('mouseenter', () => {
-        btn.style.background = 'rgba(61,242,192,0.04)';
-        btn.style.borderColor = 'rgba(61,242,192,0.50)';
+        btn.style.background = 'rgba(232,168,64,0.04)';
+        btn.style.borderColor = 'rgba(232,168,64,0.50)';
         tip.style.opacity = '1';
       });
       btn.addEventListener('mouseleave', () => {
         btn.style.background = 'rgba(10,12,16,0.75)';
-        btn.style.borderColor = 'rgba(61,242,192,0.18)';
+        btn.style.borderColor = 'rgba(232,168,64,0.18)';
         tip.style.opacity = '0';
       });
       btn.addEventListener('focus', () => {
-        btn.style.borderColor = 'rgba(61,242,192,0.70)';
+        btn.style.borderColor = 'rgba(232,168,64,0.70)';
         tip.style.opacity = '1';
       });
       btn.addEventListener('blur', () => {
-        btn.style.borderColor = 'rgba(61,242,192,0.18)';
+        btn.style.borderColor = 'rgba(232,168,64,0.18)';
         tip.style.opacity = '0';
       });
       btn.addEventListener('mousedown', () => {
-        btn.style.background = 'rgba(61,242,192,0.18)';
+        btn.style.background = 'rgba(232,168,64,0.18)';
       });
       btn.addEventListener('mouseup', () => {
-        btn.style.background = 'rgba(61,242,192,0.04)';
+        btn.style.background = 'rgba(232,168,64,0.04)';
       });
 
       btn.addEventListener('click', () => {
@@ -366,7 +366,7 @@ export class CommandCard {
     style.id = STYLE_ID;
     style.textContent = `
       #command-card button:focus-visible {
-        outline: 2px solid #3df2c0;
+        outline: 2px solid #e8a840;
         outline-offset: 2px;
       }
     `;

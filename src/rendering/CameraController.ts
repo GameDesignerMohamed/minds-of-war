@@ -37,7 +37,7 @@ export class CameraController {
   private readonly _zoom = 1.0;
 
   /** Camera offset from look-target: high angle, slight tilt toward player. */
-  private static readonly CAM_OFFSET = new THREE.Vector3(0, 60, 20);
+  private static readonly CAM_OFFSET = new THREE.Vector3(0, 40, 18);
 
   /** The world-space XZ point the camera is looking at. */
   private readonly _lookTarget = new THREE.Vector3();

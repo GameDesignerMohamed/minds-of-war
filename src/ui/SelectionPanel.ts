@@ -191,7 +191,7 @@ export class SelectionPanel {
     Object.assign(this._singleHpBar.style, {
       height: '100%',
       width: '100%',
-      background: '#3df2c0',
+      background: '#6aaa3a',
       borderRadius: '3px',
       transformOrigin: 'left',
       transition: 'transform 0.15s ease, background-color 0.15s ease',
@@ -202,7 +202,7 @@ export class SelectionPanel {
     Object.assign(this._singleHpLabel.style, {
       fontFamily: "'Space Mono', monospace",
       fontSize: '0.75rem',
-      color: '#3df2c0',
+      color: '#e8a840',
       whiteSpace: 'nowrap',
       minWidth: '64px',
       textAlign: 'right',
@@ -301,7 +301,7 @@ export class SelectionPanel {
     if (hp !== undefined && this._singleHpBar !== null && this._singleHpLabel !== null) {
       const pct = hp.max > 0 ? Math.max(0, Math.min(1, hp.current / hp.max)) : 0;
       this._singleHpBar.style.transform = `scaleX(${pct})`;
-      this._singleHpBar.style.backgroundColor = pct < 0.3 ? '#f2913d' : '#3df2c0';
+      this._singleHpBar.style.backgroundColor = pct < 0.3 ? '#d4742a' : '#6aaa3a';
       this._singleHpBar.setAttribute('aria-valuenow', String(Math.round(hp.current)));
       this._singleHpBar.setAttribute('aria-valuemax', String(hp.max));
       this._singleHpLabel.textContent = `${Math.round(hp.current)} / ${hp.max}`;
@@ -355,8 +355,8 @@ export class SelectionPanel {
         fontWeight: '700',
         fontSize: '0.8rem',
         color: 'rgba(255,255,255,0.5)',
-        background: 'rgba(61,242,192,0.08)',
-        border: '1px solid rgba(61,242,192,0.15)',
+        background: 'rgba(232,168,64,0.08)',
+        border: '1px solid rgba(232,168,64,0.15)',
         borderRadius: '4px',
         aspectRatio: '1 / 1',
       } satisfies Partial<CSSStyleDeclaration>);
@@ -393,7 +393,7 @@ export class SelectionPanel {
       left: '0',
       height: '3px',
       width: `${Math.round(hpPct * 100)}%`,
-      background: hpPct < 0.3 ? '#f2913d' : '#3df2c0',
+      background: hpPct < 0.3 ? '#d4742a' : '#6aaa3a',
       transition: 'width 0.15s ease, background-color 0.15s ease',
     } satisfies Partial<CSSStyleDeclaration>);
     wrap.appendChild(hpBar);
@@ -430,7 +430,7 @@ export class SelectionPanel {
       fontFamily: "'Poppins', sans-serif",
       fontWeight: '700',
       fontSize: '1.1rem',
-      color: '#3df2c0',
+      color: '#e8a840',
     } satisfies Partial<CSSStyleDeclaration>);
     return initial;
   }
@@ -444,7 +444,7 @@ export class SelectionPanel {
       padding: '8px 10px',
       borderRadius: '4px',
       background: 'rgba(255,255,255,0.03)',
-      border: '1px solid rgba(61,242,192,0.10)',
+      border: '1px solid rgba(232,168,64,0.10)',
       fontSize: '0.72rem',
       color: '#ffffff',
     } satisfies Partial<CSSStyleDeclaration>);
@@ -460,7 +460,7 @@ export class SelectionPanel {
     const valueEl = document.createElement('span');
     valueEl.textContent = value;
     Object.assign(valueEl.style, {
-      color: '#3df2c0',
+      color: '#e8a840',
       textAlign: 'right',
     } satisfies Partial<CSSStyleDeclaration>);
 

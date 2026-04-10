@@ -78,8 +78,8 @@ const FACTION_CARDS: readonly FactionCardDef[] = [
     displayName: t('faction.human.name'),
     tagline: t('faction.human.tagline'),
     description: t('faction.human.description'),
-    accentColor: '#3df2c0',
-    accentFill: 'rgba(61,242,192,0.06)',
+    accentColor: '#e8a840',
+    accentFill: 'rgba(232,168,64,0.06)',
   },
   {
     id: 'orc',
@@ -247,7 +247,7 @@ export class FactionSelectScreen {
       letterSpacing: '0.06em',
       margin: '0 0 8px',
       textAlign: 'center',
-      textShadow: '0 0 40px rgba(61,242,192,0.30)',
+      textShadow: '0 0 40px rgba(232,168,64,0.30)',
     } satisfies Partial<CSSStyleDeclaration>);
     root.appendChild(title);
 

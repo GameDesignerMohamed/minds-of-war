@@ -8,8 +8,8 @@
  * events.
  *
  * Visual spec:
- * - Border: 1 px solid #3df2c0 (cyan)
- * - Fill:   rgba(61,242,192,0.06)
+ * - Border: 1 px solid #e8a840 (cyan)
+ * - Fill:   rgba(232,168,64,0.06)
  * - No border-radius — sharp RTS aesthetic
  *
  * Accessibility: The rect is aria-hidden — it is a visual affordance only.
@@ -92,8 +92,8 @@ export class SelectionRect {
     Object.assign(this._rectEl.style, {
       position: 'absolute',
       display: 'none',
-      border: '1px solid #3df2c0',
-      background: 'rgba(61,242,192,0.06)',
+      border: '1px solid #e8a840',
+      background: 'rgba(232,168,64,0.06)',
       // No border-radius — RTS aesthetic
     } satisfies Partial<CSSStyleDeclaration>);
 

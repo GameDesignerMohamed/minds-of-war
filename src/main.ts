@@ -17,6 +17,7 @@ import { TrainingQueueSystem } from '@/buildings/TrainingQueueSystem';
 import { AttackSystem } from '@/combat/AttackSystem';
 import { TileGrid } from '@/map/TileGrid';
 import { initializeMap } from '@/map/MapInitializer';
+import { scatterDecor } from '@/map/DecorScatter';
 import { PathfindingSystem } from '@/pathfinding/PathfindingSystem';
 import { TechTreeSystem } from '@/buildings/TechTreeSystem';
 import { SelectionPanel } from '@/ui/SelectionPanel';
@@ -84,8 +85,9 @@ async function main(): Promise<void> {
   );
 
   const tileGrid = new TileGrid(mapWidth, mapHeight);
-  const initializedMap = initializeMap(tileGrid, config.map);
-  setup.sceneManager.addObject('terrain', meshFactory.createTerrainLayer(initializedMap));
+  // initializeMap populates tileGrid walkability data; terrain tiles are NOT rendered.
+  // Clean flat ground plane (from GameSetup) is the visual surface.
+  initializeMap(tileGrid, config.map);
 
   const fogGrid = new FogOfWarGrid(mapWidth, mapHeight);
   const fogRenderer = new FogOfWarRenderer(setup.sceneManager, fogGrid, mapWidth, mapHeight);
@@ -179,6 +181,14 @@ async function main(): Promise<void> {
       spawnResourceNode(world, setup.sceneManager, 'wood', treeX, treeZ, 100);
     }
   }
+  // Scatter decorative rocks and bushes (visual only, no gameplay effect)
+  const avoidPositions = [
+    playerOneStart,
+    playerTwoStart,
+    ...mapData.goldMines.map((m) => ({ x: m.x, z: m.z })),
+  ];
+  scatterDecor(setup.scene, { mapWidth, mapHeight, avoid: avoidPositions });
+
   console.log(`Entities spawned, scene.children=${setup.scene.children.length}`);
 
   const hudBus = new EventBus<HUDEvents>();

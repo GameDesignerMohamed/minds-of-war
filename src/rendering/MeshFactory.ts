@@ -83,6 +83,15 @@ export class MeshFactory {
   private readonly _spriteMaterials = new Map<string, THREE.SpriteMaterial>();
   private readonly _textures = new Map<string, THREE.Texture>();
 
+  static _enableShadows(obj: THREE.Object3D): void {
+    obj.traverse((node) => {
+      if (node instanceof THREE.Mesh) {
+        node.castShadow = true;
+        node.receiveShadow = true;
+      }
+    });
+  }
+
   // -------------------------------------------------------------------------
   // Terrain
   // -------------------------------------------------------------------------
@@ -160,31 +169,42 @@ export class MeshFactory {
       return sprite;
     }
 
+    let mesh: THREE.Object3D;
     switch (id) {
       case 'peasant':
       case 'thrall':
-        return this._makeWorker(c);
+        mesh = this._makeWorker(c);
+        break;
       case 'footman':
       case 'grunt':
-        return this._makeMelee(c);
+        mesh = this._makeMelee(c);
+        break;
       case 'archer':
       case 'hunter':
-        return this._makeRanged(c);
+        mesh = this._makeRanged(c);
+        break;
       case 'knight':
       case 'berserker':
-        return this._makeMounted(c);
+        mesh = this._makeMounted(c);
+        break;
       case 'cleric':
       case 'shaman':
-        return this._makeCaster(c);
+        mesh = this._makeCaster(c);
+        break;
       case 'catapult':
       case 'war_catapult':
-        return this._makeSiege(c);
+        mesh = this._makeSiege(c);
+        break;
       case 'captain':
       case 'warlord':
-        return this._makeHero(c);
+        mesh = this._makeHero(c);
+        break;
       default:
-        return this._makeMelee(c);
+        mesh = this._makeMelee(c);
+        break;
     }
+    MeshFactory._enableShadows(mesh);
+    return mesh;
   }
 
   private _makeWorker(c: { primary: number; secondary: number; accent: number }): THREE.Group {
@@ -465,34 +485,46 @@ export class MeshFactory {
       return sprite;
     }
 
+    let mesh: THREE.Object3D;
     switch (id) {
       case 'keep':
       case 'stronghold':
-        return this._makeHQ(c);
+        mesh = this._makeHQ(c);
+        break;
       case 'farm':
       case 'war_hut':
-        return this._makeFarm(c);
+        mesh = this._makeFarm(c);
+        break;
       case 'barracks':
       case 'war_camp':
-        return this._makeBarracks(c);
+        mesh = this._makeBarracks(c);
+        break;
       case 'archery_range':
       case 'beast_den':
-        return this._makeRange(c);
+        mesh = this._makeRange(c);
+        break;
       case 'watch_tower':
       case 'watch_post':
-        return this._makeTower(c);
+        mesh = this._makeTower(c);
+        break;
       case 'blacksmith':
       case 'war_forge':
-        return this._makeSmith(c);
+        mesh = this._makeSmith(c);
+        break;
       case 'sanctum':
       case 'spirit_lodge':
-        return this._makeTemple(c);
+        mesh = this._makeTemple(c);
+        break;
       case 'workshop':
       case 'siege_pit':
-        return this._makeWorkshop(c);
+        mesh = this._makeWorkshop(c);
+        break;
       default:
-        return this._makeBarracks(c);
+        mesh = this._makeBarracks(c);
+        break;
     }
+    MeshFactory._enableShadows(mesh);
+    return mesh;
   }
 
   private _makeHQ(c: { primary: number; secondary: number; accent: number }): THREE.Group {

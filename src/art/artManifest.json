@@ -5,8 +5,8 @@
       "faction": "human",
       "portrait": "/art/portraits/peasant.png",
       "worldScale": {
-        "x": 1.4,
-        "y": 1.7
+        "x": 2.1,
+        "y": 2.55
       },
       "states": {
         "idle": {
@@ -95,8 +95,8 @@
       "faction": "human",
       "portrait": "/art/portraits/footman.png",
       "worldScale": {
-        "x": 1.6,
-        "y": 1.9
+        "x": 2.4,
+        "y": 2.85
       },
       "states": {
         "idle": {
@@ -185,8 +185,8 @@
       "faction": "human",
       "portrait": "/art/portraits/archer.png",
       "worldScale": {
-        "x": 1.55,
-        "y": 1.85
+        "x": 2.33,
+        "y": 2.78
       },
       "states": {
         "idle": {
@@ -275,8 +275,8 @@
       "faction": "human",
       "portrait": "/art/portraits/knight.png",
       "worldScale": {
-        "x": 2.4,
-        "y": 2.55
+        "x": 3.6,
+        "y": 3.83
       },
       "states": {
         "idle": {
@@ -365,8 +365,8 @@
       "faction": "human",
       "portrait": "/art/portraits/cleric.png",
       "worldScale": {
-        "x": 1.6,
-        "y": 2.0
+        "x": 2.4,
+        "y": 3
       },
       "states": {
         "idle": {
@@ -455,8 +455,8 @@
       "faction": "human",
       "portrait": "/art/portraits/catapult.png",
       "worldScale": {
-        "x": 2.8,
-        "y": 2.1
+        "x": 4.2,
+        "y": 3.15
       },
       "states": {
         "idle": {
@@ -545,8 +545,8 @@
       "faction": "human",
       "portrait": "/art/portraits/captain.png",
       "worldScale": {
-        "x": 1.8,
-        "y": 2.15
+        "x": 2.7,
+        "y": 3.22
       },
       "states": {
         "idle": {
@@ -635,8 +635,8 @@
       "faction": "orc",
       "portrait": "/art/portraits/thrall.png",
       "worldScale": {
-        "x": 1.4,
-        "y": 1.7
+        "x": 2.1,
+        "y": 2.55
       },
       "states": {
         "idle": {
@@ -725,8 +725,8 @@
       "faction": "orc",
       "portrait": "/art/portraits/grunt.png",
       "worldScale": {
-        "x": 1.6,
-        "y": 1.9
+        "x": 2.4,
+        "y": 2.85
       },
       "states": {
         "idle": {
@@ -815,8 +815,8 @@
       "faction": "orc",
       "portrait": "/art/portraits/hunter.png",
       "worldScale": {
-        "x": 1.55,
-        "y": 1.85
+        "x": 2.33,
+        "y": 2.78
       },
       "states": {
         "idle": {
@@ -905,8 +905,8 @@
       "faction": "orc",
       "portrait": "/art/portraits/berserker.png",
       "worldScale": {
-        "x": 2.4,
-        "y": 2.55
+        "x": 3.6,
+        "y": 3.83
       },
       "states": {
         "idle": {
@@ -995,8 +995,8 @@
       "faction": "orc",
       "portrait": "/art/portraits/shaman.png",
       "worldScale": {
-        "x": 1.6,
-        "y": 2.0
+        "x": 2.4,
+        "y": 3
       },
       "states": {
         "idle": {
@@ -1085,8 +1085,8 @@
       "faction": "orc",
       "portrait": "/art/portraits/war_catapult.png",
       "worldScale": {
-        "x": 2.8,
-        "y": 2.1
+        "x": 4.2,
+        "y": 3.15
       },
       "states": {
         "idle": {
@@ -1175,8 +1175,8 @@
       "faction": "orc",
       "portrait": "/art/portraits/warlord.png",
       "worldScale": {
-        "x": 1.8,
-        "y": 2.15
+        "x": 2.7,
+        "y": 3.22
       },
       "states": {
         "idle": {
@@ -1277,7 +1277,7 @@
       "sprite": "/art/buildings/farm.png",
       "portrait": "/art/portraits/farm.png",
       "worldScale": {
-        "x": 3.0,
+        "x": 3,
         "y": 2.7
       }
     },
@@ -1295,7 +1295,7 @@
       "sprite": "/art/buildings/archery_range.png",
       "portrait": "/art/portraits/archery_range.png",
       "worldScale": {
-        "x": 4.0,
+        "x": 4,
         "y": 3.5
       }
     },
@@ -1304,7 +1304,7 @@
       "sprite": "/art/buildings/sanctum.png",
       "portrait": "/art/portraits/sanctum.png",
       "worldScale": {
-        "x": 4.0,
+        "x": 4,
         "y": 3.9
       }
     },
@@ -1349,7 +1349,7 @@
       "sprite": "/art/buildings/war_hut.png",
       "portrait": "/art/portraits/war_hut.png",
       "worldScale": {
-        "x": 3.0,
+        "x": 3,
         "y": 2.7
       }
     },
@@ -1367,7 +1367,7 @@
       "sprite": "/art/buildings/beast_den.png",
       "portrait": "/art/portraits/beast_den.png",
       "worldScale": {
-        "x": 4.0,
+        "x": 4,
         "y": 3.5
       }
     },
@@ -1376,7 +1376,7 @@
       "sprite": "/art/buildings/spirit_lodge.png",
       "portrait": "/art/portraits/spirit_lodge.png",
       "worldScale": {
-        "x": 4.0,
+        "x": 4,
         "y": 3.9
       }
     },

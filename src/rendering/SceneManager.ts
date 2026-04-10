@@ -53,7 +53,7 @@ export class SceneManager {
 
   constructor(scene: THREE.Scene) {
     this._scene = scene;
-    this._scene.background = new THREE.Color(0x050512); // dark Animoca theme
+    this._scene.background = new THREE.Color(0x1a2a1a); // dark green, matches map edge
     this._setupLighting();
   }
 
@@ -180,18 +180,20 @@ export class SceneManager {
    *   above and to the side of the map to cast diagonal shadows
    */
   private _setupLighting(): void {
-    const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+    const ambient = new THREE.AmbientLight(0xb0c4de, 0.6);
     this._scene.add(ambient);
 
     const sun = new THREE.DirectionalLight(0xfff5e0, 1.2);
-    sun.position.set(50, 80, 30);
+    // Position light relative to map center so shadows cover the full 96x96 map
+    sun.position.set(48 + 30, 80, 48 - 20);
+    sun.target.position.set(48, 0, 48);
     sun.castShadow = true;
 
-    // Shadow camera frustum sized for a typical 32x32 tile map
-    sun.shadow.camera.left = -60;
-    sun.shadow.camera.right = 60;
-    sun.shadow.camera.top = 60;
-    sun.shadow.camera.bottom = -60;
+    // Shadow camera frustum covers full 96x96 map from the map center
+    sun.shadow.camera.left = -55;
+    sun.shadow.camera.right = 55;
+    sun.shadow.camera.top = 55;
+    sun.shadow.camera.bottom = -55;
     sun.shadow.camera.near = 0.5;
     sun.shadow.camera.far = 200;
 
@@ -200,5 +202,6 @@ export class SceneManager {
     sun.shadow.bias = -0.001;
 
     this._scene.add(sun);
+    this._scene.add(sun.target);
   }
 }

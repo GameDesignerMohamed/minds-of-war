@@ -10,7 +10,7 @@
  * all game input via pointer-events: all.
  *
  * Visual spec:
- * - Win:  dark overlay with cyan text (#3df2c0), "VICTORY" heading.
+ * - Win:  dark overlay with cyan text (#e8a840), "VICTORY" heading.
  * - Lose: dark overlay with desaturated text, "DEFEAT" heading.
  * - Buttons: Poppins 600, outlined in cyan.
  * - Background: full-bleed dark with a subtle radial glow behind the heading.
@@ -242,7 +242,7 @@ export class VictoryScreen {
       transform: 'translate(-50%, -50%)',
       width: '400px',
       height: '300px',
-      background: 'radial-gradient(ellipse at center, rgba(61,242,192,0.08) 0%, transparent 70%)',
+      background: 'radial-gradient(ellipse at center, rgba(232,168,64,0.08) 0%, transparent 70%)',
       pointerEvents: 'none',
       zIndex: '-1',
     } satisfies Partial<CSSStyleDeclaration>);
@@ -279,7 +279,7 @@ export class VictoryScreen {
     Object.assign(sep.style, {
       width: '160px',
       height: '1px',
-      background: 'rgba(61,242,192,0.25)',
+      background: 'rgba(232,168,64,0.25)',
       marginBottom: '8px',
     } satisfies Partial<CSSStyleDeclaration>);
     card.appendChild(sep);
@@ -320,9 +320,9 @@ export class VictoryScreen {
       padding: '10px 32px',
       borderRadius: '4px',
       cursor: 'pointer',
-      border: '1px solid #3df2c0',
-      background: primary ? '#3df2c0' : 'transparent',
-      color: primary ? '#060810' : '#3df2c0',
+      border: '1px solid #e8a840',
+      background: primary ? '#e8a840' : 'transparent',
+      color: primary ? '#060810' : '#e8a840',
       transition: 'background 0.15s, color 0.15s, box-shadow 0.15s',
       outline: 'none',
       letterSpacing: '0.04em',
@@ -332,12 +332,12 @@ export class VictoryScreen {
       if (primary) {
         btn.style.background = '#6af7d5';
       } else {
-        btn.style.background = 'rgba(61,242,192,0.10)';
-        btn.style.boxShadow = '0 0 12px rgba(61,242,192,0.25)';
+        btn.style.background = 'rgba(232,168,64,0.10)';
+        btn.style.boxShadow = '0 0 12px rgba(232,168,64,0.25)';
       }
     });
     btn.addEventListener('mouseleave', () => {
-      btn.style.background = primary ? '#3df2c0' : 'transparent';
+      btn.style.background = primary ? '#e8a840' : 'transparent';
       btn.style.boxShadow = 'none';
     });
     btn.addEventListener('click', onClick);
@@ -354,7 +354,7 @@ export class VictoryScreen {
 
     if (outcome === 'win') {
       this._heading.textContent = 'VICTORY';
-      this._heading.style.color = '#3df2c0';
+      this._heading.style.color = '#e8a840';
       this._subline.textContent = subline ?? 'The battle is won.';
       this._root!.setAttribute('aria-label', 'Victory — match won');
     } else {

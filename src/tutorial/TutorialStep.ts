@@ -107,7 +107,7 @@ export function createTutorialSteps(ctx: TutorialContext): TutorialStep[] {
     {
       id: 'select-worker',
       title: 'Select a Worker',
-      body: "Left-click on one of your Peasant workers to select them. You'll see a cyan ring appear around them.",
+      body: "Left-click on one of your Peasant workers to select them. You'll see an amber ring appear around them.",
       completionHint: '> Click a Peasant to continue...',
       stepNumber: 2,
       totalSteps: TOTAL,

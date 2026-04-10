@@ -205,7 +205,7 @@ export class BuildingFactory {
     // Selection ring — a flat torus at ground level, hidden by default
     const ringRadius = size * 0.65;
     const ringGeo = new THREE.TorusGeometry(ringRadius, 0.07, 8, 32);
-    const ringMat = new THREE.MeshBasicMaterial({ color: 0x3df2c0 });
+    const ringMat = new THREE.MeshBasicMaterial({ color: 0xe8a840 });
     const ringMesh = new THREE.Mesh(ringGeo, ringMat);
     ringMesh.rotation.x = -Math.PI / 2;
     ringMesh.position.set(x, 0.05, z);

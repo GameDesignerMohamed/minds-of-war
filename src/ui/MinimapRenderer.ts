@@ -3,7 +3,7 @@
  *
  * Renders a 160×160 pixel canvas showing entity positions mapped from world
  * space (96×96 tiles) to canvas pixels. Entities are colour-coded by faction:
- * - Units: cyan (#3df2c0) for Human, red (#ff5533) for Orc.
+ * - Units: cyan (#e8a840) for Human, red (#ff5533) for Orc.
  * - Buildings: same palette, drawn as 3×3 px squares.
  * - Resource nodes (gold mines): gold (#f2c03d) dots.
  *
@@ -78,7 +78,7 @@ const CANVAS_SIZE = 160;
 const BG_COLOR = '#050512';
 
 /** Faction dot colours. */
-const COLOR_HUMAN = '#3df2c0';
+const COLOR_HUMAN = '#e8a840';
 const COLOR_ORC = '#ff5533';
 const COLOR_RESOURCE = '#f2c03d';
 
@@ -243,7 +243,7 @@ export class MinimapRenderer {
       fontWeight: '700',
       fontSize: '0.65rem',
       letterSpacing: '0.14em',
-      color: 'rgba(61,242,192,0.50)',
+      color: 'rgba(232,168,64,0.50)',
       userSelect: 'none',
       lineHeight: '1',
     } satisfies Partial<CSSStyleDeclaration>);
@@ -290,7 +290,7 @@ export class MinimapRenderer {
     style.id = STYLE_ID;
     style.textContent = `
       canvas[aria-label*="Minimap"]:focus-visible {
-        outline: 2px solid #3df2c0;
+        outline: 2px solid #e8a840;
         outline-offset: 2px;
       }
     `;

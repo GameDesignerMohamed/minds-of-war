@@ -21,8 +21,8 @@ function injectStyles(): void {
   style.id = STYLE_ID;
   style.textContent = `
     @keyframes tut-pulse {
-      0%, 100% { box-shadow: 0 0 0 4px rgba(61,242,192,0.35); }
-      50%      { box-shadow: 0 0 0 10px rgba(61,242,192,0.08); }
+      0%, 100% { box-shadow: 0 0 0 4px rgba(232,168,64,0.35); }
+      50%      { box-shadow: 0 0 0 10px rgba(232,168,64,0.08); }
     }
     @keyframes tut-fade-in {
       from { opacity: 0; transform: translateY(8px); }
@@ -37,7 +37,7 @@ function injectStyles(): void {
       position: fixed;
       width: 360px;
       background: #0a0c10;
-      border: 2px solid rgba(61,242,192,0.45);
+      border: 2px solid rgba(232,168,64,0.45);
       border-radius: 8px;
       padding: 16px 20px;
       pointer-events: auto;
@@ -50,7 +50,7 @@ function injectStyles(): void {
     #tut-step-counter {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
-      color: rgba(61,242,192,0.5);
+      color: rgba(232,168,64,0.5);
       margin-bottom: 6px;
       letter-spacing: 0.08em;
     }
@@ -73,7 +73,7 @@ function injectStyles(): void {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
       font-style: italic;
-      color: rgba(61,242,192,0.6);
+      color: rgba(232,168,64,0.6);
       margin: 0 0 10px 0;
     }
     #tut-skip-btn {
